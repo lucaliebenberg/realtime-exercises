@@ -30,7 +30,7 @@ function parseMessage(buffer) {
   // then we'll convert it to a utf8 string
   const response = Buffer.alloc(messageLength);
   for (let i = 0; i < messageLength; i++) {
-    // applying the mask to get the correct byte out
+    // applying the mask to get the correct bytef out
     const maskPosition = i % 4;
 
     let shift;
