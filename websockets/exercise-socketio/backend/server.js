@@ -2,6 +2,7 @@ import http from "http";
 import handler from "serve-handler";
 import nanobuffer from "nanobuffer";
 import { Server } from "socket.io";
+import fs from "node:fs";
 
 const msg = new nanobuffer(50);
 const getMsgs = () => Array.from(msg).reverse();
@@ -43,3 +44,5 @@ const port = process.env.PORT || 8080;
 server.listen(port, () =>
   console.log(`Server running at http://localhost:${port}`)
 );
+
+const out = fs.read;
